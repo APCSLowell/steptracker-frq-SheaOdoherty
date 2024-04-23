@@ -1,14 +1,13 @@
 import java.util.ArrayList;
 public class StepTracker
 {
- public class StepTracker {
     private int minSteps;
     private int totalSteps;
     private int totalDays;
     private int activeDays;
 
-    public StepTracker(int minSteps) {
-        this.minSteps = minSteps;
+    public StepTracker(int goal) {
+        minSteps=goal;
         totalSteps = 0;
         totalDays = 0;
         activeDays = 0;
@@ -25,7 +24,7 @@ public class StepTracker
     }
     public double averageSteps() {
         if (totalDays == 0) {
-            return 0;
+            return 0.0;
         }
         return (double) totalSteps / totalDays;
     }
